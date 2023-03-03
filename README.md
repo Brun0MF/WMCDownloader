@@ -15,5 +15,6 @@ wmcd.download_images("Cats", max_images=10)
 ```
 
 ## Available Functions
-**download_images(**{Search Term(String)} **)**
+
++ **download_images(**${\color{orange}String}$, max_images= ${\color{cyan}Int}$ **)**
 
