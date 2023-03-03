@@ -13,7 +13,7 @@ def download_images(title, max_images=None):
     url = 'https://commons.wikimedia.org/w/index.php?search='+searchtitle+'&title=Special:MediaSearch&type=image'
 
     # Create Folder Name
-    folder_name = title.replace(' ','_')
+    folder_name = "WMD/"+title.replace(' ','_')
 
     # Request the Web Page
     response = requests.get(url)
@@ -29,14 +29,14 @@ def download_images(title, max_images=None):
     for img_tag in img_tags:
         
         img_url = img_tag.get('src')
-        img_name ="WMD"+folder_name+"/"+img_tag.get('alt')
+        img_name =folder_name+"/"+img_tag.get('alt')
         if img_url:
             print("Downloading: ("+img_name+") "+img_url)
             try:
                 urllib.request.urlretrieve(img_url, img_name)
                 count += 1   
-            except:
-                print("Download Failed!")
+            except Exception as e:
+                print("Download Failed! /n("+str(e)+")")
                 pass
             time.sleep(1)
             
