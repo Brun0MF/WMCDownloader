@@ -40,7 +40,7 @@ def download_images(title, max_images=None):
                 pass
             time.sleep(1)
             
-        if(count >= max_images):
+        if(count >= int(max_images)):
             break
 
     print(f'{count} images have been transferred to {folder_name}.')
