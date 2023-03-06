@@ -4,7 +4,9 @@ This library was initially designed to collect images that would be used in trai
 Just indicate the search term and the maximum amount of images and it will start collecting.
 
 ## Usage:
-**It is not available in PIP. It is necessary to transfer the file and place it in the main folder.**
+> __Note__
+> **It is not available in PIP. It is necessary to transfer the file and place it in the main folder.**
+
 
 ```python
 
@@ -13,8 +15,7 @@ import WMCDownloader as wmcd
 wmcd.download_images("Cats", max_images=10)
 
 ```
-
 ## Available Functions
 
-+ **download_images(**[String], max_images= [Int] **)**
++ **download_images(** [String], max_images= [Int]**)**
 
